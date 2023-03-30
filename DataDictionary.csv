@@ -1,0 +1,106 @@
+﻿covidence,paper ID number creating by Covidence
+title,paper title
+author,first author of paper
+year,Published year of paper
+country,Country(ies) data was collected
+youngR,age range of younger adult age group
+youngM,median age of younger adult age group
+youngSD,standard deviation of age for the younger adult age group
+youngN,number included in analyses for the younger adult age group
+youngSEXF,how many females included in the younger adult age group
+youngSEXM,how many men included in the  younger adult age group
+youngTYPE,whether youngSEXF/M was caluclated as whole number or percentage
+oldR,age range of older adult age group
+oldM,median age of older adult age group
+oldSD,standard deviation of age for the older adult age group
+oldN,number included in analyses for the older adult age group
+oldSEXF,how many females included in the older adult age group
+oldSEXM,how many men included in the  older adult age group
+oldTYPE,whether oldSEXF/M was caluclated as whole number or percentage
+middleR,age range of middle adult age group
+middleM,median age of middle adult age group
+middleSD,standard deviation of age for the middle adult age group
+middleN,number included in analyses for the middle adult age group
+middleSEXF,how many females included in the middle adult age group
+middleSEXM,how many men included in the  middle adult age group
+middleTYPE,whether middleSEXF/M was caluclated as whole number or percentage
+otherR,age range of adults for studies that examined age continuously
+otherM,median age of adults for studies that examined age continuously
+otherSD,standard deviation of age for studies that examined age continuously
+otherN,number included in analyses for the other age group
+otherSEXF,how many females included in the other adult age group
+otherSEXM,how many men included in the  other adult age group
+otherTYPE,whether otherSEXF/M was caluclated as whole number or percentage
+sampleN,total number of adults included in analyses
+sampleSEXF,how many females were included in analyses
+sampleSEXM,how many males were included in analyses
+sampleTYPE,whether sampleSEXF/M was caluclated as whole number or percentage
+design,design of the study
+eeone_name,name of the first emotional empathy measure
+eeone_notes,important details related to the first emotional empathy measure
+eeone_modality,whether the first emotional empathy measure was a questionnaire or video task
+eeone_ymean,mean performance for the younger adult group on the first emotional empathy measure
+eeone_ysd,standard deviation for the younger adult group on the first emotional empathy measure
+eeone_omean,mean performance for the older adult group on the first emotional empathy measure
+eeone_osd,standard deviation for the older adult group on the first emotional empathy measure
+eeone_mmean,mean performance for the middle adult group on the first emotional empathy measure
+eeone_msd,standard deviation for the middle adult group on the first emotional empathy measure
+eeone_test,statistical analysis used to compare age group differences on the first emotional empathy measure
+eeone_p,p value of the statistical anlysis used to compare age group differences on the first emotional empathy measure
+eeone_value,value of the statistical anlysis used to compare age group differences on the first emotional empathy measure
+eeone_type,type of value examined by the statistical analysis used to compare age group differences on the first emotional empathy measure
+eeone_odds,odds ratio for the first emotional empathy measure
+eeone_95,95% confidence interval of the statistical anlysis used to compare age group differences on the first emotional empathy measure
+eeone_effect,effect estimate of the statistical anlysis used to compare age group differences on the first emotional empathy measure
+eeone_effecttype,effect type of the statistical anlysis used to compare age group differences on the first emotional empathy measure
+eetwo_name,name of the second emotional empathy measure
+eetwo_notes,important details related to the second emotional empathy measure
+eetwo_modality,whether the second emotional empathy measure was a questionnaire or video task
+eetwo_ymean,mean performance for the younger adult group on the second emotional empathy measure
+eetwo_ysd,standard deviation for the younger adult group on the second emotional empathy measure
+eetwo_omean,mean performance for the older adult group on the second emotional empathy measure
+eetwo_osd,standard deviation for the older adult group on the second emotional empathy measure
+eetwo_mmean,mean performance for the middle adult group on the second emotional empathy measure
+eetwo_msd,standard deviation for the middle adult group on the second emotional empathy measure
+eetwo_test,statistical analysis used to compare age group differences on the second emotional empathy measure
+eetwo_p,p value of the statistical anlysis used to compare age group differences on the second emotional empathy measure
+eetwo_value,value of the statistical anlysis used to compare age group differences on the second emotional empathy measure
+eetwo_type,type of value examined by the statistical analysis used to compare age group differences on the second emotional empathy measure
+eetwo_odds,odds ratio for the second emotional empathy measure
+eetwo_95,95% confidence interval of the statistical anlysis used to compare age group differences on the second emotional empathy measure
+eetwo_effect,effect estimate of the statistical anlysis used to compare age group differences on the second emotional empathy measure
+eetwo_effecttype,effect type of the statistical anlysis used to compare age group differences on the second emotional empathy measure
+eethree_name,name of the fourth emotional empathy measure
+eethree_notes,important details related to the third emotional empathy measure
+eethree_modality,whether the third emotional empathy measure was a questionnaire or video task
+eethree_ymean,mean performance for the younger adult group on the third emotional empathy measure
+eethree_ysd,standard deviation for the younger adult group on the third emotional empathy measure
+eethree_omean,mean performance for the older adult group on the third emotional empathy measure
+eethree_osd,standard deviation for the older adult group on the third emotional empathy measure
+eethree_mmean,mean performance for the middle adult group on the third emotional empathy measure
+eethree_msd,standard deviation for the middle adult group on the third emotional empathy measure
+eethree_test,statistical analysis used to compare age group differences on the third emotional empathy measure
+eethree_p,p value of the statistical anlysis used to compare age group differences on the third emotional empathy measure
+eethree_value,value of the statistical anlysis used to compare age group differences on the third emotional empathy measure
+eethree_type,type of value examined by the statistical analysis used to compare age group differences on the third emotional empathy measure
+eethree_odds,odds ratio for the third emotional empathy measure
+eethree_95,95% confidence interval of the statistical anlysis used to compare age group differences on the third emotional empathy measure
+eethree_effect,effect estimate of the statistical anlysis used to compare age group differences on the third emotional empathy measure
+eethree_effecttype,effect type of the statistical anlysis used to compare age group differences on the third emotional empathy measure
+eefour_name,name of the fourth emotional empathy measure
+eefour_notes,important details related to the fourth emotional empathy measure
+eefour_modality,whether the fourth emotional empathy measure was a questionnaire or video task
+eefour_ymean,mean performance for the younger adult group on the fourth emotional empathy measure
+eefour_ysd,standard deviation for the younger adult group on the fourth emotional empathy measure
+eefour_omean,mean performance for the older adult group on the fourth emotional empathy measure
+eefour_osd,standard deviation for the older adult group on the fourth emotional empathy measure
+eefour_mmean,mean performance for the middle adult group on the fourth emotional empathy measure
+eefour_msd,standard deviation for the middle adult group on the fourth emotional empathy measure
+eefour_test,statistical analysis used to compare age group differences on the fourth emotional empathy measure
+eefour_p,p value of the statistical anlysis used to compare age group differences on the fourth emotional empathy measure
+eefour_value,value of the statistical anlysis used to compare age group differences on the fourth emotional empathy measure
+eefour_type,type of value examined by the statistical analysis used to compare age group differences on the fourth emotional empathy measure
+eefour_odds,odds ratio for the fourth emotional empathy measure
+eefour_95,95% confidence interval of the statistical anlysis used to compare age group differences on the fourth emotional empathy measure
+eefour_effect,effect estimate of the statistical anlysis used to compare age group differences on the fourth emotional empathy measure
+eefour_effecttype,effect type of the statistical anlysis used to compare age group differences on the fourth emotional empathy measure
