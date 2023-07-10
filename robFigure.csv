@@ -1,0 +1,31 @@
+﻿Domain,Rating,Count
+Selection bias,Definitely low,12
+Selection bias,Probably low,23
+Selection bias,Probably high,4
+Selection bias,Definitely high,3
+Selection bias,NR,2
+Confounding bias,Definitely low,25
+Confounding bias,Probably low,8
+Confounding bias,Probably high,4
+Confounding bias,Definitely high,3
+Confounding bias,NR,4
+Performance bias,Definitely low,33
+Performance bias,Probably low,9
+Performance bias,Probably high,2
+Performance bias,Definitely high,0
+Performance bias,NR,0
+Detection bias,Definitely low,34
+Detection bias,Probably low,1
+Detection bias,Probably high,7
+Detection bias,Definitely high,2
+Detection bias,NR,0
+Selective reporting bias,Definitely low,44
+Selective reporting bias,Probably low,0
+Selective reporting bias,Probably high,0
+Selective reporting bias,Definitely high,0
+Selective reporting bias,NR,0
+Other bias,Definitely low,41
+Other bias,Probably low,3
+Other bias,Probably high,0
+Other bias,Definitely high,0
+Other bias,NR,0

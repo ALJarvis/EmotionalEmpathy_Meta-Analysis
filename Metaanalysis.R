@@ -160,7 +160,7 @@ cor_data <- empathyreview %>%
   slice(3, 19, 32:33, 37, 39, 41)
 
 mean_data <- empathyreview %>%
-  slice(1:2, 4:18, 20:21, 24:31, 34:36, 38, 40, 42)
+  slice(1:2, 4:18, 20:21, 24:31, 34:36, 38, 40, 42:43)
 
 misc_data <- empathyreview %>%
   slice(22, 23)
@@ -517,7 +517,7 @@ text(c(-1.8), 61, c("Measure"))
 par(op)
 
 #Add text with k and p for overall model results
-text(-2.8, -1, pos=4, cex=0.75, bquote(paste("Model (K = 33, N = ", .(formatC(mvmeta$k, digits=2, format="f")), 
+text(-2.8, -1, pos=4, cex=0.75, bquote(paste("Model (K = 34, N = ", .(formatC(mvmeta$k, digits=2, format="f")), 
                                              ", p = ", .(formatC(mvmeta$pval, digits=3, format="f")), ")")))
 
 #Add text underneath for heterogeneity
@@ -539,7 +539,7 @@ dim(mm.head) <- c(1,10)
 mm1 <- c("Trait tasks", paste("27"), mod1$k[1], mod1$beta[1], mod1$ci.lb[1], mod1$ci.ub[1], mod1$se[1], 
          round(mod1$pval,3)[1], "", "")
 dim(mm1) <- c(1,10)
-mm2 <- c("State tasks", paste("10"), mod2$k, mod2$beta, mod2$ci.lb, mod2$ci.ub, mod2$se, round(mod2$pval,3), "", "")
+mm2 <- c("State tasks", paste("11"), mod2$k, mod2$beta, mod2$ci.lb, mod2$ci.ub, mod2$se, round(mod2$pval,3), "", "")
 dim(mm2) <- c(1,10)
 
 #Measure name
@@ -552,7 +552,7 @@ mn2 <- c("IRI Personal Distress", paste("14"), name2$k, name2$beta, name2$ci.lb,
 dim(mn2) <- c(1,10)
 mn3 <- c("Emotional Congruence", paste("3"), name3$k, name3$beta, name3$ci.lb, name3$ci.ub, name3$se, round(name3$pval,3), "", "")
 dim(mn3) <- c(1,10)
-mn4 <- c("All Other Measures", paste("13"), name4$k, name4$beta, name4$ci.lb, name4$ci.ub, name4$se, paste("<.001"), "", "")
+mn4 <- c("All Other Measures", paste("14"), name4$k, name4$beta, name4$ci.lb, name4$ci.ub, name4$se, paste("<.001"), "", "")
 dim(mn4) <- c(1,10)
 
 
@@ -607,11 +607,15 @@ p <- forestploter::forest(ES_domains_df[,c(1:3,8:12)],
                           xlim = c(-0.5,0.5),
 )
 
+plot(p)
+
 #Add italics
 newp <- forestploter::edit_plot(p,
                                 row = c(1, 4), 
                                 col = 1, 
                                 gp = gpar(fontface = "italic"))
+
+plot(newp)
 
 dev.off() 
 
