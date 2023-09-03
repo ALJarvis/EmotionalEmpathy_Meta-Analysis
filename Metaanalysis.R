@@ -764,7 +764,7 @@ dev.off()
 # PART 9: SENSITIVITY ANALYSES --------------------------------------------
 
 #Meta-analysis for younger versus older adults
-es1 <- escalc(measure = "SMD",
+YO_es <- escalc(measure = "SMD",
               m1i = Mmean_young,
               sd1i = Msd_young,
               n1i = youngN,
@@ -776,11 +776,32 @@ es1 <- escalc(measure = "SMD",
   group_by(paper) %>%
   mutate(group_id = cur_group_id())
 
-rma.mv(data=es1, yi,vi,random= ~1 |group_id)
+#Remove outlier
+YO_es1 <- YO_es[YO_es$Mmean_old != 5.380, ]
 
+#Reverse order of effect sizes to make interpretation easier
+YO_es1$yi <- -YO_es1$yi
+
+#Run meta-analysis
+yando_meta <- rma.mv(data=YO_es1, yi,vi,random= ~1 |group_id)
+
+#Create forest plot
+tiff(filename = "yando.tiff", width = 18, height = 16, units = "in", res = 600, compression = "lzw")
+
+metafor::forest(yando_meta, slab=paste(paper), xlim=c(-2.8, 2.2), alim = c(-2, 2),
+                ilab=cbind(Mname), ilab.xpos=c(-1.8), xlab="Hedges' (standardised) g",
+                cex=.8, header = "Author Year", mlab="", order = yi)
+op <- par(cex=.8, font=2)
+text(c(-1.8), 62, c("Measure"))
+par(op)
+
+text(-2.8, -1, pos=4, cex=0.75, bquote(paste("Model (K = 33, N = ", .(formatC(yando_meta$k, digits=2, format="f")), 
+                                             ", p = ", .(formatC(yando_meta$pval, digits=3, format="f")), ")")))
+
+dev.off() 
 
 #Meta-analysis for middle versus older adults 
-es2 <- escalc(measure = "SMD",
+MO_es <- escalc(measure = "SMD",
               m1i = Mmean_middle,
               sd1i = Msd_middle,
               n1i = middleN,
@@ -792,11 +813,30 @@ es2 <- escalc(measure = "SMD",
   group_by(paper) %>%
   mutate(group_id = cur_group_id())
 
-rma.mv(data=es2,yi,vi,random= ~1 |group_id)
+#Reverse order of effect sizes to make interpretation easier
+MO_es$yi <- -MO_es$yi
+
+#Run meta-analysis
+mando_meta <- rma.mv(data=MO_es,yi,vi,random= ~1 |group_id)
+
+#Create forest plot
+tiff(filename = "mando.tiff", width = 18, height = 16, units = "in", res = 600, compression = "lzw")
+
+metafor::forest(mando_meta, slab=paste(paper), xlim=c(-2.8, 2.2), alim = c(-2, 2),
+                ilab=cbind(Mname), ilab.xpos=c(-1.8), xlab="Hedges' (standardised) g",
+                cex=.8, header = "Author Year", mlab="", order = yi)
+op <- par(cex=.8, font=2)
+text(c(-1.8), 62, c("Measure"))
+par(op)
+
+text(-2.8, -1, pos=4, cex=0.75, bquote(paste("Model (K = 10, N = ", .(formatC(mando_meta$k, digits=2, format="f")), 
+                                             ", p = ", .(formatC(mando_meta$pval, digits=3, format="f")), ")")))
+
+dev.off() 
 
 
 #Meta-analysis for younger versus middle adults
-es3 <- escalc(measure = "SMD",
+YM_es <- escalc(measure = "SMD",
               m1i = Mmean_middle,
               sd1i = Msd_middle,
               n1i = middleN,
@@ -808,6 +848,25 @@ es3 <- escalc(measure = "SMD",
   group_by(paper) %>%
   mutate(group_id = cur_group_id())
 
-rma.mv(data=es3,yi,vi,random= ~1 |group_id)
+#Reverse order of effect sizes to make interpretation easier
+YM_es$yi <- -YM_es$yi
 
+#Run meta-analysis
+yandm_meta <- rma.mv(data=YM_es,yi,vi,random= ~1 |group_id)
+
+
+#Create forest plot
+tiff(filename = "yandm.tiff", width = 18, height = 16, units = "in", res = 600, compression = "lzw")
+
+metafor::forest(yandm_meta, slab=paste(paper), xlim=c(-2.8, 2.2), alim = c(-2, 2),
+                ilab=cbind(Mname), ilab.xpos=c(-1.8), xlab="Hedges' (standardised) g",
+                cex=.8, header = "Author Year", mlab="", order = yi)
+op <- par(cex=.8, font=2)
+text(c(-1.8), 62, c("Measure"))
+par(op)
+
+text(-2.8, -1, pos=4, cex=0.75, bquote(paste("Model (K = 9, N = ", .(formatC(yandm_meta$k, digits=2, format="f")), 
+                                             ", p = ", .(formatC(yandm_meta$pval, digits=3, format="f")), ")")))
+
+dev.off() 
 
